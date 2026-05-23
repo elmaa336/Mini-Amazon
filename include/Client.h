@@ -2,28 +2,29 @@
 #define CLIENT_H
 
 #include <iostream>
+#include <string>
 #include <vector>
 #include "Order.h"
-
-using namespace std;
 
 class Client {
 private:
     int id;
-    string nom;
-    string email;
-    vector<Order> historiqueCommandes;
+    std::string nom; 
+    std::string email;
+    std::vector<Order> historiqueCommandes;
 
 public:
     Client();
-    Client(int id, string nom, string email);
+    Client(int id, std::string nom, std::string email);
+    Client(std::string n) : id(0), nom(n), email("unknown@email.com") {}
 
     int getId() const;
-    string getNom() const;
-    string getEmail() const;
+    std::string getNom() const;
+    std::string getEmail() const;
+    std::string getName() const { return nom; }
 
-    void setNom(string nom);
-    void setEmail(string email);
+    void setNom(std::string nom);
+    void setEmail(std::string email);
 
     void ajouterCommande(const Order& commande);
     void afficherClient() const;
