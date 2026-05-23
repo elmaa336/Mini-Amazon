@@ -6,12 +6,12 @@
 
 class Product
 {
-protected:
+protected: 
     int id;
     std::string name;
     double price;
     int stock;
-    std::string category;
+    std::string category; 
 
 public:
     Product(int id,
@@ -20,23 +20,21 @@ public:
             int stock,
             const std::string& category);
 
+    Product(int i, std::string n, double p, int s)
+        : id(i), name(n), price(p), stock(s), category("General") {}
+
     virtual ~Product();
 
-    // Getters
     int getId() const;
     std::string getName() const;
     double getPrice() const;
     int getStock() const;
     std::string getCategory() const;
 
-    // Setters
     void setPrice(double newPrice);
     void setStock(int newStock);
 
-    // Polymorphism
     virtual void displayProduct() const = 0;
-
-    // Future recommendation engine
     virtual double similarityScore() const = 0;
 };
 
