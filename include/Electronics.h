@@ -3,6 +3,7 @@
 
 #include "Product.h"
 
+<<<<<<< HEAD
 class Electronics : public Product {
 public:
     std::string brand;
@@ -15,3 +16,23 @@ public:
 };
 
 #endif
+=======
+class Electronics : public Product
+{
+private:
+    int warrantyMonths;
+
+public:
+    Electronics(int id,
+                const std::string& name,
+                double price,
+                int stock,
+                int warrantyMonths);
+
+    void displayProduct() const override;
+
+    double similarityScore() const override;
+};
+
+#endif
+>>>>>>> origin/main

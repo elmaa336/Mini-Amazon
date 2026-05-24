@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  #ifndef CART_H
+=======
+#ifndef CART_H
+>>>>>>> origin/main
 #define CART_H
 
 #include <vector>
@@ -6,6 +10,7 @@
 
 class Cart {
 private:
+<<<<<<< HEAD
     std::vector<Product*> items;
 public:
     void add(Product* p) { items.push_back(p); }
@@ -18,3 +23,15 @@ public:
 };
 
 #endif
+=======
+    vector<Product*> products;
+
+public:
+    void addProduct(Product* p);
+    vector<Product*>& getProducts();
+    void showCart() const;
+    void clear();
+};
+
+#endif
+>>>>>>> origin/main

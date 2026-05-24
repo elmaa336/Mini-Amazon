@@ -3,6 +3,7 @@
 
 #include "Product.h"
 
+<<<<<<< HEAD
 class Clothing : public Product {
 public:
     std::string style;
@@ -15,3 +16,23 @@ public:
 };
 
 #endif
+=======
+class Clothing : public Product
+{
+private:
+    std::string size;
+
+public:
+    Clothing(int id,
+             const std::string& name,
+             double price,
+             int stock,
+             const std::string& size);
+
+    void displayProduct() const override;
+
+    double similarityScore() const override;
+};
+
+#endif
+>>>>>>> origin/main
