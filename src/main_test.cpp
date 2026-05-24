@@ -3,7 +3,7 @@
 #include <string>
 #include "Pricing.h" //Pricing file
 
-// MOCK CLASSES (To simulate 1 and  3) ---
+// MOCK CLASSES 
 class Product {
 public:
     std::string name;
@@ -40,7 +40,7 @@ int main() {
     // 1. Setup the Scene
     Cart myCart;
     
-    // 2 Add some items (Simulating Person 3's work)
+    // 2 Add some items (
     Electronics* laptop = new Electronics("MacBook", 1200.0, "Apple");
     Electronics* phone = new Electronics("iPhone", 800.0, "Apple");
     
@@ -49,7 +49,7 @@ int main() {
 
     double subtotal = myCart.getSubtotal();
 
-    // 3. Test YOUR Pricing Logic (Part 1)
+    // 3. Test Pricing Logic (Part 1)
     std::cout << "========================================" << std::endl;
     std::cout << "       E-COMMERCE PRICING TEST          " << std::endl;
     std::cout << "========================================" << std::endl;
@@ -60,10 +60,8 @@ int main() {
     std::cout << "TOTAL TO PAY:   " << Pricing::calculateFinalTotal(subtotal) << " DH" << std::endl;
     std::cout << "========================================\n" << std::endl;
 
-    // 4. Test YOUR Recommendation Logic (Part 2)
+    // 4. Test Recommendation Logic (Part 2)
     std::cout << "Checking Recommendation Engine..." << std::endl;
-    // In a real run, this would loop through the catalog.
-    // For now, we confirm the similarity hook is reachable.
     double score = laptop->similarityScore(myCart);
     std::cout << "Similarity Score for Laptop: " << score << " (Success!)" << std::endl;
 
