@@ -22,6 +22,7 @@ public:
     void reduceStock(int quantity);
     void addStock(int quantity);
     bool isAvailable(int quantity) const;
+
     void display() const;
 };
 
