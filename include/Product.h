@@ -3,6 +3,23 @@
 
 <<<<<<< HEAD
 #include <string>
+
+class Cart; // Forward declaration
+
+class Product {
+public:
+    std::string name;
+    double price;
+    
+    Product(std::string n, double p) : name(n), price(p) {}
+    virtual ~Product() {}
+    virtual double similarityScore(const Cart& cart) const = 0;
+};
+
+#endif
+=======
+<<<<<<< HEAD
+#include <string>
 #include <iostream>
 
 class Product {
@@ -65,3 +82,4 @@ public:
 
 #endif
 >>>>>>> a8f02140433f838923f2890ac3f778ea639c2842
+>>>>>>> origin/main
