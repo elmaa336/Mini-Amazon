@@ -14,6 +14,18 @@ vector<Product*>& Cart::getProducts() {
     return products;
 }
 
+const std::vector<Product*>& Cart::getProducts() const {
+    return products;
+}
+
+double Cart::getSubtotal() const {
+    double sum = 0.0;
+    for (auto p : products) {
+        sum += p->getPrice();
+    }
+    return sum;
+}
+
 void Cart::showCart() const {
     cout << "\n--- CART ---\n";
 

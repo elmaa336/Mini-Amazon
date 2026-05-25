@@ -62,7 +62,7 @@ void Order::validateOrder() {
          << calculateTotal() << endl;
 }
 
-void Order::updateStatus(string newStatus) {
+void Order::updateStatus(const std::string& newStatus) {
 
     status = newStatus;
 }

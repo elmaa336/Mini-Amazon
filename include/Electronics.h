@@ -2,24 +2,12 @@
 #define ELECTRONICS_H
 
 #include "Product.h"
+#include <string>
 
-<<<<<<< HEAD
-class Electronics : public Product {
-public:
-    std::string brand;
-    
-    Electronics(std::string n, double p, std::string b) : Product(n, p), brand(b) {}
-    
-    std::string getBrand() const { return brand; }
-    
-    double similarityScore(const Cart& cart) const override;
-};
-
-#endif
-=======
 class Electronics : public Product
 {
 private:
+    std::string brand;
     int warrantyMonths;
 
 public:
@@ -27,12 +15,13 @@ public:
                 const std::string& name,
                 double price,
                 int stock,
+                const std::string& brand,
                 int warrantyMonths);
 
     void displayProduct() const override;
-
-    double similarityScore() const override;
+    double similarityScore(const Cart& cart) const override;
+    const std::string& getBrand() const;
 };
 
 #endif
->>>>>>> origin/main
+

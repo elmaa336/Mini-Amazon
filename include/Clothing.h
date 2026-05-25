@@ -2,37 +2,24 @@
 #define CLOTHING_H
 
 #include "Product.h"
+#include <string>
 
-<<<<<<< HEAD
-class Clothing : public Product {
-public:
-    std::string style;
-    
-    Clothing(std::string n, double p, std::string s) : Product(n, p), style(s) {}
-    
-    std::string getStyle() const { return style; }
-    
-    double similarityScore(const Cart& cart) const override;
-};
-
-#endif
-=======
 class Clothing : public Product
 {
 private:
-    std::string size;
+    std::string style;
 
 public:
     Clothing(int id,
              const std::string& name,
              double price,
              int stock,
-             const std::string& size);
+             const std::string& style);
 
     void displayProduct() const override;
-
-    double similarityScore() const override;
+    double similarityScore(const Cart& cart) const override;
+    const std::string& getStyle() const;
 };
 
 #endif
->>>>>>> origin/main
+

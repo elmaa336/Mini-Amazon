@@ -1,4 +1,5 @@
 #include "Client.h"
+#include <iostream>
 
 Client::Client() {
     id = 0;
@@ -6,7 +7,7 @@ Client::Client() {
     email = "";
 }
 
-Client::Client(int id, string nom, string email) {
+Client::Client(int id, std::string nom, std::string email) {
     this->id = id;
     this->nom = nom;
     this->email = email;
@@ -16,19 +17,19 @@ int Client::getId() const {
     return id;
 }
 
-string Client::getNom() const {
+std::string Client::getNom() const {
     return nom;
 }
 
-string Client::getEmail() const {
+std::string Client::getEmail() const {
     return email;
 }
 
-void Client::setNom(string nom) {
+void Client::setNom(std::string nom) {
     this->nom = nom;
 }
 
-void Client::setEmail(string email) {
+void Client::setEmail(std::string email) {
     this->email = email;
 }
 
@@ -37,21 +38,21 @@ void Client::ajouterCommande(const Order& commande) {
 }
 
 void Client::afficherClient() const {
-    cout << "ID Client : " << id << endl;
-    cout << "Nom       : " << nom << endl;
-    cout << "Email     : " << email << endl;
+    std::cout << "ID Client : " << id << std::endl;
+    std::cout << "Nom       : " << nom << std::endl;
+    std::cout << "Email     : " << email << std::endl;
 }
 
 void Client::afficherHistorique() const {
-    cout << "\nHistorique des commandes de " << nom << " :" << endl;
+    std::cout << "\nHistorique des commandes de " << nom << " :" << std::endl;
 
     if (historiqueCommandes.empty()) {
-        cout << "Aucune commande trouvee." << endl;
+        std::cout << "Aucune commande trouvee." << std::endl;
         return;
     }
 
     for (const Order& commande : historiqueCommandes) {
-        commande.afficherCommande();
-        cout << "----------------------" << endl;
+        commande.displayOrder();
+        std::cout << "----------------------" << std::endl;
     }
 }

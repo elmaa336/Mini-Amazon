@@ -2,24 +2,12 @@
 #define FOOD_H
 
 #include "Product.h"
+#include <string>
 
-<<<<<<< HEAD
-class Food : public Product {
-public:
-    std::string category;
-    
-    Food(std::string n, double p, std::string c) : Product(n, p), category(c) {}
-    
-    std::string getCategory() const { return category; }
-    
-    double similarityScore(const Cart& cart) const override;
-};
-
-#endif
-=======
 class Food : public Product
 {
 private:
+    std::string foodCategory;
     int expirationDays;
 
 public:
@@ -27,12 +15,13 @@ public:
          const std::string& name,
          double price,
          int stock,
+         const std::string& foodCategory,
          int expirationDays);
 
     void displayProduct() const override;
-
-    double similarityScore() const override;
+    double similarityScore(const Cart& cart) const override;
+    const std::string& getFoodCategory() const;
 };
 
 #endif
->>>>>>> origin/main
+
