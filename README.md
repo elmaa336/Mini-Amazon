@@ -80,8 +80,19 @@ ou
 ```
 
 ---
-
 # 👥 Contexte Académique
 
-Projet universitaire de Programmation Orientée Objet (POO)  
-Réalisé par une équipe de 5 étudiants.
+Ce projet a été réalisé dans le cadre du module de Programmation Orientée Objet (POO). Il s’agit d’un travail de groupe effectué par une équipe de 5 étudiants.
+
+L’objectif principal était de concevoir et développer ensemble une application e-commerce en C++, en appliquant les concepts de la programmation orientée objet dans un projet réel et structuré.
+
+Le travail a été organisé en équipe avec une répartition des tâches entre les membres (gestion des produits, panier, logique métier, interface, etc.), afin de simuler un environnement de développement collaboratif.
+
+Le projet a également permis de pratiquer les bonnes pratiques de développement collaboratif, notamment :
+- utilisation de Git pour le suivi des versions
+- collaboration via GitHub
+- gestion des branches et des commits
+- intégration et fusion du travail de chaque membre
+- coordination du code dans une base commune
+
+Ce travail met donc en avant à la fois les compétences en C++ et la capacité à travailler en équipe sur un projet logiciel structuré.
