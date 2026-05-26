@@ -29,57 +29,49 @@ Le projet repose sur plusieurs composants techniques :
 
 # 🚀 Compilation & Exécution
 
-## 1. Cloner le dépôt GitHub
+## 1. Cloner le projet
 
 ```bash
-git clone https://github.com/elmaa336/-Mini-Amazon.git
+git clone https://github.com/elmaa336/Mini-Amazon.git
+cd Mini-Amazon
 ```
 
-## 2. Accéder au dossier du projet
+---
 
-```bash
-cd -Mini-Amazon
-```
-
-## 3. Générer le dossier de build
-
-Depuis la racine du projet, exécutez la commande suivante afin que CMake génère automatiquement l’environnement de compilation adapté à votre système :
+## 2. Générer et compiler le projet
 
 ```bash
 cmake -S . -B build
+cmake --build build --config Release
 ```
 
-## 4. Compiler le projet
+---
 
-Compilez l’ensemble des fichiers source afin de générer l’exécutable final :
+## 3. Lancer l’application
 
-```bash
-cmake --build build --config Debug
-```
-
-## 5. Lancer l’application
-
-Après la compilation, l’exécutable peut être généré dans différents dossiers selon le compilateur et la configuration CMake utilisée.
-
-### Emplacements possibles sous Windows
+### Windows
 
 ```powershell
 .\build\bin\StoreApp.exe
 ```
 
-ou
+ou (selon le générateur CMake)
 
 ```powershell
-.\build\Debug\StoreApp.exe
+.\build\Release\StoreApp.exe
 ```
+
+---
 
 ### Linux / macOS
 
 ```bash
 ./build/StoreApp
+ou
+./build/bin/StoreApp
 ```
-
 ---
+
 # 👥 Contexte Académique
 
 Ce projet a été réalisé dans le cadre du module de Programmation Orientée Objet (POO). Il s’agit d’un travail de groupe effectué par une équipe de 5 étudiants.
